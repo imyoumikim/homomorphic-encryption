@@ -45,9 +45,8 @@ void example_rotation_bfv() // 행렬의 행을 왼쪽으로 3번 회전시킨 �
 
     cout << "Input plaintext matrix:" << endl;
     print_matrix(pod_matrix, row_size);
-
     
-		// BatchEncoder를 이용하여 행렬을 평문으로 만듦.
+     // BatchEncoder를 이용하여 행렬을 평문으로 만듦.
 
     Plaintext plain_matrix;
     print_line(__LINE__);
@@ -88,7 +87,7 @@ void example_rotation_bfv() // 행렬의 행을 왼쪽으로 3번 회전시킨 �
     batch_encoder.decode(plain_result, pod_matrix); // 디코딩
     print_matrix(pod_matrix, row_size);
 
-		//행을 오른쪽으로 4번 회전시키고, 복호화, 디코딩, 출력하는 과정
+     //행을 오른쪽으로 4번 회전시키고, 복호화, 디코딩, 출력하는 과정
     
     print_line(__LINE__);
     cout << "Rotate rows 4 steps right." << endl;
@@ -100,7 +99,7 @@ void example_rotation_bfv() // 행렬의 행을 왼쪽으로 3번 회전시킨 �
     batch_encoder.decode(plain_result, pod_matrix); // 디코딩
     print_matrix(pod_matrix, row_size);
 
-		// 회전 연산은 노이즈 버젯을 사용하지 않음. 그러나 이것은 특수 소수가 적어도 다른 소수들 만큼 큰 경우에만 해당.
+     // 회전 연산은 노이즈 버젯을 사용하지 않음. 그러나 이것은 특수 소수가 적어도 다른 소수들 만큼 큰 경우에만 해당.
 }
 
 void example_rotation_ckks() // ckks는 bfv와 매우 유사한 방식으로 회전 연산을 수행
@@ -112,7 +111,7 @@ void example_rotation_ckks() // ckks는 bfv와 매우 유사한 방식으로 회
     size_t poly_modulus_degree = 8192;
     parms.set_poly_modulus_degree(poly_modulus_degree);
     parms.set_coeff_modulus(CoeffModulus::Create(poly_modulus_degree, { 40, 40, 40, 40, 40 }));
-		// 40비트 크기의 5개의 소수(prime)를 사용하여 계수 모듈러스를 생성
+     // 40비트 크기의 5개의 소수(prime)를 사용하여 계수 모듈러스를 생성
 
     SEALContext context(parms);
     print_parameters(context);
