@@ -9,6 +9,8 @@
   * 5_ckks_basics.cpp, 6_rotation.cpp
 * week3: 주어진 상황에 맞게 위의 두 코드 수정
 * week4: week3의 과제를 OpenFHE의 코드로 수정
+* week5, 6: Debugging을 용이하게 하는 새로운 클래스 TraceableCiphertext 생성
+  *  Scale 확인, Original vector 값 - Decryption vector 값 비교
 -----
 ### Reference
 Microsoft SEAL: https://github.com/microsoft/SEAL <br>
